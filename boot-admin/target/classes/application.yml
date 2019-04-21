@@ -1,0 +1,28 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  datasource:
+    name: datasource
+    url: jdbc:mysql://127.0.0.1:3306/primary?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.hk.model
+  mapper-locations: classpath:mapper/*.xml
+server:
+  servlet:
+    context-path: /hkboot
+logging:
+  level:
+    root: info
+    org.springframework.web: debug
+redis:
+  shiro:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 0
+    password:
